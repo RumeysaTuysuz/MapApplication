@@ -1,0 +1,422 @@
+/* Genel Ayarlar */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header ve Navbar */
+  header {
+    background-color: #004d99;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+  }
+  
+  /* Genel Buton Stili */
+  .btn {
+    background-color: #0099ff;
+    font-size: 16px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    margin: 2px; /* Moved from separate .btn styles */
+  }
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn:hover {
+    background-color: #007acc;
+  }
+  
+  .btn i,
+  .btn svg {
+    font-size: 20px;
+  }
+  
+  /* Reset Button */
+  #resetViewBtn {
+    background-color: #004d99;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  #resetViewBtn i,
+  #resetViewBtn svg {
+    font-size: 20px;
+  }
+  
+  /* Harita */
+  .map {
+    width: 100%;
+    height: 650px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  /* Panel */
+  .panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 300px;
+  }
+  
+  .panel h2 {
+    margin-top: 0;
+  }
+  
+  .panel label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .panel input {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Original had 4px, changed to 1px unless needed */
+    border-radius: 5px;
+  }
+  
+  .panel button {
+    width: 100%;
+  }
+  
+  /* DataTable */
+  .data-table-wrapper {
+    margin-top: 20px;
+  }
+  
+  .data-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table-wrapper th,
+  .data-table-wrapper td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .data-table-wrapper th {
+    background-color: #004d99;
+    color: white;
+  }
+  .table .btn i {
+    margin: 0; /* İkonların buton içinde ortalanmasını sağlar */
+  }
+  /* Query Paneli - Geometriyi Silme Butonu */
+  .table .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+  }
+  
+  .table .btn-danger:hover {
+    background-color: #c82333; /* Daha koyu kırmızı */
+    border-color: #bd2130;
+  }
+  
+  .table .btn {
+    width: 36px; /* Genişlik */
+    height: 36px; /* Yükseklik */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 50%; /* Butonları yuvarlak yapar */
+    font-size: 16px;
+    margin: 0 4px; /* Butonlar arasında biraz boşluk bırakır */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* SweetAlert2 Custom */
+  .my-swal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .my-swal-popup {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 0em;
+  }
+  
+  .swal2-input {
+    width: 70%;
+  }
+  
+  /* Popup Stili */
+  .ol-popup {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+  }
+  
+  .ol-popup:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+  
+  .ol-popup-closer {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .ol-popup-closer:after {
+    content: "×";
+  }
+  
+  /* Info Popup */
+  #infoPopup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    box-shadow: 0px 0px 10px rgba(255, 254, 254, 1);
+  }
+  .popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 300px; /* Popup genişliğini arttırdık */
+    word-wrap: break-word; /* WKT'nin taşmasını önlemek için kelime kırma */
+  }
+  
+  #popup-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .popup-btn {
+    background-color: #007bff; /* Varsayılan mavi renk */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 36px; /* Buton genişliği */
+    height: 36px; /* Buton yüksekliği */
+    border-radius: 50%; /* Butonları yuvarlak yap */
+  
+    font-size: 18px; /* İkon boyutu */
+  
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .popup-btn i {
+    margin-right: 8px; /* İkon ile metin arasında boşluk bırak */
+    font-size: 16px; /* İkon boyutunu ayarla */
+    vertical-align: middle; /* İkonu metinle hizala */
+  }
+  
+  .popup-btn:hover {
+    transform: scale(1.05); /* Hover'da butonun hafifçe büyümesi */
+  }
+  .popup-btn.edit-btn {
+    background-color: #28a745; /* Yeşil */
+  }
+  .popup-btn.edit-btn:hover {
+    background-color: #218838; /* Daha koyu yeşil */
+  }
+  .popup-btn.delete-btn {
+    background-color: #dc3545; /* Kırmızı */
+  }
+  .popup-btn.delete-btn:hover {
+    background-color: #c82333; /* Daha koyu kırmızı */
+  }
+  .popup-btn.close-btn {
+    background-color: #6c757d; /* Gri */
+  }
+  .popup-btn.close-btn:hover {
+    background-color: #5a6268; /* Daha koyu gri */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Butonlar arasında boşluk */
+    margin-top: 10px;
+  }
+  /* SweetAlert2 Custom Styles */
+  .swal2-custom-popup {
+    background-color: #f4f4f4; /* Hafif gri arka plan */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    padding: 20px; /* İç kenar boşluğu */
+    width: 600px; /* Popup genişliği */
+    max-width: 90%; /* Ekran genişliğinin %90'ını geçmesin */
+    height: auto; /* Otomatik yükseklik */
+  }
+  .swal2-custom-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  .swal2-custom-html {
+    text-align: center;
+  }
+  .swal2-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .swal2-textarea {
+    margin-top: 10px; /* Giriş alanlarının üstüne boşluk ekleyin */
+    padding: 10px; /* Giriş alanlarının içine boşluk ekleyin */
+    border-radius: 5px; /* Giriş alanlarının köşelerini yuvarlatın */
+    border: 1px solid #ccc; /* Giriş alanlarının kenarını düzenleyin */
+    font-size: 14px;
+    width: 100%; /* Giriş alanlarının genişliği popup'ın tamamını kapsasın */
+    box-sizing: border-box; /* Padding ve border dahil genişliği ayarlayın */
+  }
+  
+  .swal2-textarea {
+    height: 150px; /* Metin alanının yüksekliğini artırın */
+  }
+  
+  .swal2-confirm-btn {
+    background-color: #28a745; /* Yeşil buton */
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .swal2-confirm-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .swal2-cancel-btn {
+    background-color: #dc3545; /* Kırmızı buton */
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .swal2-cancel-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harita Uygulaması</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- SweetAlert2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <!-- jsPanel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jspanel4@4.15.0/dist/jspanel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-container">
+         <!-- <img src="icons/BasarSoftLogo.png" alt="Logo" class="logo" />  -->
+          <h1>Harita Uygulaması</h1>
+        </div>
+        <nav class="navbar">
+          
+          <button id="queryBtn" class="btn">Query</button>
+          <button id="geometryBtn" class="btn">Geometry</button>
+          <button id="resetViewBtn" class="btn">
+            <i class="fas fa-home"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <div id="popup" class="popup">
+      <div id="popup-content">
+        <p><strong>ID:</strong> <span id="popup-id"></span></p>
+        <p><strong>Name:</strong> <span id="popup-name"></span></p>
+        <p><strong>WKT:</strong> <span id="popup-wkt"></span></p>
+        <div class="button-container">
+          <button id="update-btn" class="popup-btn">Güncelle</button>
+          <button id="delete-btn" class="popup-btn">Sil</button>
+          <button id="close-popup-btn" class="popup-btn">Kapat</button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div id="map" class="map"></div>
+
+      <div id="panel" class="panel">
+        <h2>Add Point</h2>
+        <label for="xCoord">X:</label>
+        <input type="text" id="xCoord" readonly />
+        <label for="yCoord">Y:</label>
+        <input type="text" id="yCoord" readonly />
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+        <button id="saveBtn" class="btn">Save</button>
+      </div>
+
+      <div id="infoPopup"></div>
+    </main>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.20.1/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspanel4@4.15.0/dist/jspanel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
